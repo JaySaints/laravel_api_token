@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "48d40d9f-eff2-4dba-8d23-71704e511f3f",
+		"name": "api_enterprise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|WghUeHCgmwNUyOYUW35D7hM1yvmTxab9X7BC5nFF",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|WghUeHCgmwNUyOYUW35D7hM1yvmTxab9X7BC5nFF",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Caneca- 5",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Caneca de plastico",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "365.08",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upadte products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Book",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Harry Potter",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "32.80",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/products/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete products",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/products/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/products/search/iphone",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"products",
+						"search",
+						"iphone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register in API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Jota",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "jota@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "abc12345",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "abc12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout api",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1|WghUeHCgmwNUyOYUW35D7hM1yvmTxab9X7BC5nFF",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Api login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "jota@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "abc12345",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
